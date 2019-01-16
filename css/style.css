@@ -6,10 +6,7 @@
 /* Navigation Section */
 
 .navbar{
-    position: sticky;
-    top: 0;
-    left: 0;
-    background:rgb(62, 146, 62, 0.8);
+    background:rgb(62, 146, 62, 0.2);
 }
 
 .navbar img{
@@ -39,7 +36,7 @@
 #navigation-items li a:hover{
    font-size: 20px;
    padding: 0px 20px;
-   background: rgba(247, 53, 53, 0.279);   
+   background: rgba(209, 4, 4, 0.9);   
 }
 
 #navigation-items li .active{
@@ -47,4 +44,60 @@
     padding: 0px 20px;
     background: rgba(247, 53, 53, 0.279);   
  }
- 
+
+ /* Heading Section */
+
+#heading-section{
+background-image:url('../images/header.jpeg');
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center;
+height: 100vh;
+opacity: 0.9;
+color: rgba(243, 66, 22, 0.986);
+}
+
+#heading-section .content{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    margin-top: 20vh;
+    display: block;
+}
+
+.welcome-text{
+    padding-top: 20px;
+    font-weight: 800px;
+    font-size : 34px
+}
+
+.profession{
+    font-weight: 500px;
+    font-size: 25px
+}
+.profession-adjective{
+    font-weight: 500px;
+    font-size: 25px;
+    color: white;
+}
+.welcome-text::after{
+  content: '';
+  background: #efefef;
+  display: block;
+  height: 5px;
+  width: 300px;
+  margin: 20px auto 5px;
+}
+
+
+/* Footer Section */
+#footer-section{
+    background:rgba(88, 212, 88, 0.5);
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    padding-top: 14px;
+}
+
+.socail-icons{
+    padding: 0px 40px;
+}
