@@ -3,6 +3,11 @@
     padding: 0px;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+  
+
 /* Navigation Section */
 
 .navbar{
@@ -48,13 +53,12 @@
  /* Heading Section */
 
 #heading-section{
-background-image:url('../images/header.jpeg');
+background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)) ,url('../images/header.jpeg');
 background-repeat:no-repeat;
 background-size:cover;
 background-position:center;
 height: 100vh;
-opacity: 0.9;
-color: rgba(243, 66, 22, 0.986);
+color: rgba(245, 103, 9, 0.938);
 }
 
 #heading-section .content{
@@ -64,7 +68,7 @@ color: rgba(243, 66, 22, 0.986);
     display: block;
 }
 
-.welcome-text{
+.welcome-text {
     padding-top: 20px;
     font-weight: 800px;
     font-size : 34px
@@ -88,6 +92,126 @@ color: rgba(243, 66, 22, 0.986);
   margin: 20px auto 5px;
 }
 
+/* Skills Section */
+
+#skill-section{
+    background: rgba(236, 15, 15, 0.3);
+    text-align: center;
+}
+
+.skill-heading{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 34px;
+    color: white;
+    
+}
+ 
+.skill-heading::after{
+    content: '';
+    background: #efefef;
+    display: block;
+    height: 5px;
+    width: 100px;
+    margin: 10px auto 5px;
+  }
+  
+.skill-container{
+    height: 300px;
+    display: flex;
+    flex-flow: row  wrap;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.skill{
+    text-align:center;
+    color: white;
+    font-size: 10px;
+    font-weight: bolder;
+    background: rgba(0,0,0,0.5);
+    padding: 20px 0px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    width: 70px;
+    height: 60px;
+    box-sizing: border-box;
+    
+}
+
+@keyframes skillanimate{
+    0%{
+        transform: translateY(-100%);
+        background: green;
+        }
+    24%{
+        transform: translateY(-200%);
+        background: orange;
+        }
+    50%{
+        transform: translateY(-100%);
+        background: green;
+        }
+    100%{
+        transform: rotate(xx) translateY(0%);
+        }
+    101%{
+        transform: rotate(xx) translateY(-100%);
+        background: green;
+        }
+}
+
+.skill-html , .skill-scss , .skill-javascript , .skill-nodejs{
+    animation: skillanimate 5s infinite 0s linear;
+}
+
+@keyframes skillanimate-2{
+    0%{
+        transform: translateY(-200%);
+        background: red;
+        }
+    24%{
+        transform: translateY(-100%);
+        background: rgb(79, 119, 228);
+        }
+    50%{
+        transform: translateY(-2    00%);
+        background: rgba(175, 23, 168, 0.644);
+        }
+    100%{
+        transform: rotate(xx) translateY(0%);
+        }
+    101%{
+        transform: rotate(xx) translateY(-100%);
+        background: rgba(114, 33, 96, 0.897);
+        }
+}
+
+.skill-css , .skill-jquery , .skill-react, .skill-graphql{
+    animation: skillanimate-2 5s infinite 0s linear;
+}
+/* .skill-html{
+    animation: htmltext 5s infinite 0s linear;
+}
+    @keyframes htmltext{
+    0%{
+        transform: translateX(100px);
+        background: green;
+        }
+    49%{
+        transform: translateX(150px);
+        background: orange;
+        }
+    75%{
+        transform: translateX( 100px);
+        background: green;
+        }
+    100%{
+        transform: rotate(xx) translateX( 0px);
+        }
+}
+
+ */
 
 /* Footer Section */
 #footer-section{
