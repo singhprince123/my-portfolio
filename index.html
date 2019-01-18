@@ -23,13 +23,13 @@
         <div class="collapse navbar-collapse " id="collapsibleNavbar">
           <ul class="navbar-nav ml-auto" id="navigation-items">
             <li class="nav-item">
-              <a class="nav-link active" href="#">About</a>
+              <a class="nav-link active" href="#about-section">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#skill-section">Skills</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
+              <a class="nav-link" href="#project-section">Projects</a>
             </li>    
           </ul>
         </div>  
@@ -54,30 +54,53 @@
 </section>
 
 <!--About Section-->
-<section id="about-section"></section>
+<section id="about-section">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="about-heading">About Me</h2>
+      <div class="about-content">
+        <p>Hi , My name is Prince Singh.I am web developer, as i started my carrier doing html and css.
+        It was very interesting and I was having fun while doing though some time messing in css , positioning things and  I think thats fair enogh eveey body goes thruogh.</p>
+        <p>This brings me to the web development and since i have done computer science , i have done this before while i was in graduating in computer science engineering
+        The next thing that i have learnt is javascript and initially i was thinking that with javascript i could do only making website interactive but as i explored it , 
+        i find every thing i could do with javascript whether it is  front-end or backed.
+        Then i learnt Angular , nodejs that makes me capable of making entire application.</p>
+        <p>When i finished my graduation , i started for applying jobs . I got job at whitedhat junior where  i done 3 months of intership as Associate FrontEnd intern.
+          I worked on Sailsjs and ejs and made there website.
+          Apart from coding , I like to play cricket and watching webseries and 
+          and most enjoyable  and that i really  like spending time with my friends.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6"></div>
+  </div>
+</section>
 
 <!-- Skill Section-->
-<section id="skill-section">
-  <span class="skill-heading">Skills</span>
-  <div class="row">
-    <div class="col-md-7">
-      <div class="skill-container">
-          <div class="skill skill-html">HTML</div>
-          <div class="skill skill-css">CSS</div>
-          <div class="skill skill-scss">SCSS</div>
-          <div class= "skill skill-jquery">JQUERY</div>
-          <div class="skill skill-javascript">JAVASCRIPT</div>
-          <div class="skill skill-react">REACT</div>
-          <div class="skill skill-nodejs">NODEJS</div>
-          <div class="skill skill-graphql">GRAPHQL</div>
+<section class="skill-section" id ="skill-section">
+  <div class="container" >
+      <p class="skill-heading">Skills</p>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="skill-container">
+              <div class="skill skill-html">HTML</div>
+              <div class="skill skill-css">CSS</div>
+              <div class="skill skill-scss">SCSS</div>
+              <div class= "skill skill-jquery">JQUERY</div>
+              <div class="skill skill-javascript">JAVASCRIPT</div>
+              <div class="skill skill-react">REACT</div>
+              <div class="skill skill-nodejs">NODEJS</div>
+              <div class="skill skill-graphql">GRAPHQL</div>
+           </div>
        </div>
-   </div>
-  <div class="col-md-5">
-     <div>
-
-     </div>
+      
+         <div>
+    
+         </div>
+      </div>
+      </div>
   </div>
-  </div>
+  
 
 </div>
  
@@ -86,7 +109,55 @@
 </section>
 
 <!--Project Section-->
-<section id="project-section"></section>
+<section id="project-section">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4 col-sm-12">
+        <div class="project-card">
+            <div class="card">
+                <img class="card-img-top" src="images/html.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Static Website</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-success">Github</a>
+                </div>
+              </div>
+        </div>
+        
+        
+      </div>
+
+      <div class="col-md-4 col-sm-12">
+          <div class="project-card">
+            <div class="card" >
+              <img class="card-img-top" src="images/react.jpeg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">React Application</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-success">Github</a>
+              </div>
+            </div></div>
+      
+      </div>
+
+      <div class="col-md-4 col-sm-12">
+          <div class="project-card">
+              <div class="card">
+                  <img class="card-img-top" src="images/nodejs.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Nodejs Server</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-success">Github</a>
+                  </div>
+                </div>
+          </div>
+          
+            
+      </div>
+    </div>
+  </div>
+</section>
 
 <!--Social Media Section-->
 <section id="social-media">
@@ -114,9 +185,9 @@ let count =0;
 
 const rotateWord = () =>{
     let currentWord = adjective[count]; 
-    console.log(currentWord)
+
     const element=  document.querySelector('.profession-adjective');
-    console.log(element)
+    
        element.innerHTML= currentWord;
     count++;
     if(count == adjective.length){
@@ -125,6 +196,13 @@ const rotateWord = () =>{
     setTimeout( rotateWord ,1000 )
 }
 rotateWord() ;
+
+$(document).ready(function(){
+  $('ul li a').click(function(){
+    $('li a').removeClass("active");
+    $(this).addClass("active");
+});
+});
 </script>
 
 </body>

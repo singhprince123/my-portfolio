@@ -64,10 +64,13 @@ color: rgba(245, 103, 9, 0.938);
 #heading-section .content{
     font-family: 'Lato', sans-serif;
     font-weight: bold;
-    margin-top: 20vh;
     display: block;
+    margin-top: 30vh;
 }
-
+#heading-section img{
+    width: 200px;
+    height: 150px;
+}
 .welcome-text {
     padding-top: 20px;
     font-weight: 800px;
@@ -89,24 +92,85 @@ color: rgba(245, 103, 9, 0.938);
   display: block;
   height: 5px;
   width: 300px;
-  margin: 20px auto 5px;
+  margin: 10px auto 5px;
 }
 
-/* Skills Section */
+/* About section */
 
-#skill-section{
-    background: rgba(236, 15, 15, 0.3);
+#about-section{
+    padding: 20px;
+    background: white;
     text-align: center;
+    position: relative;
+    z-index: -3;
 }
 
-.skill-heading{
+.about-heading{
     font-family: 'Lato', sans-serif;
     font-weight: bold;
     font-size: 34px;
-    color: white;
+    color: rgba(245, 103, 9, 0.938);
     
 }
  
+.about-heading::after{
+    content: '';
+    background: rgba(245, 103, 9, 0.938);;
+    display: block;
+    height: 5px;
+    width: 100px;
+    margin: 10px auto 5px;
+  }
+
+  .about-content{
+     text-align: center;
+     font-size: .9em;
+     padding: 1.23em;
+     line-height: 1.9em;
+     float: left
+  }
+/* Skills Section */
+
+.skill-section{
+    background: rgba(3, 98, 241, 0.815);
+    text-align: center;
+    border-top-left-radius: 40px;
+    transform: skewY(-2deg);
+    z-index: -7;
+}
+.skill-section:before{
+    content:"";
+    width: 40px;
+    height: 40px;
+    background:rgba(3, 98, 241, 0.815);;
+    position: absolute;
+    top: -39px;
+    right: 0;
+    z-index: 8;
+    
+}
+
+.skill-section::after{
+    content: "";
+    width:80px;
+    height:80px;
+    background: white;
+    border: 24px solid white;
+    border-radius: 50%;
+    top:-80px;
+    position: absolute;
+    right: 0;
+   
+    z-index: 55
+}
+.skill-heading{
+    transform: skewY(2deg);
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 44px;
+    color: white;
+    
+}
 .skill-heading::after{
     content: '';
     background: #efefef;
@@ -114,6 +178,7 @@ color: rgba(245, 103, 9, 0.938);
     height: 5px;
     width: 100px;
     margin: 10px auto 5px;
+    z-index: -23;
   }
   
 .skill-container{
@@ -122,6 +187,7 @@ color: rgba(245, 103, 9, 0.938);
     flex-flow: row  wrap;
     justify-content: space-evenly;
     align-items: flex-end;
+    
 }
 
 .skill{
@@ -167,52 +233,49 @@ color: rgba(245, 103, 9, 0.938);
 
 @keyframes skillanimate-2{
     0%{
-        transform: translateY(-200%);
+        transform: translateY(-100%);
         background: red;
         }
     24%{
-        transform: translateY(-100%);
+        transform: translateY(-120%);
         background: rgb(79, 119, 228);
         }
     50%{
-        transform: translateY(-2    00%);
+        transform: translateY(-200%);
         background: rgba(175, 23, 168, 0.644);
         }
     100%{
         transform: rotate(xx) translateY(0%);
         }
-    101%{
+    /* 101%{
         transform: rotate(xx) translateY(-100%);
         background: rgba(114, 33, 96, 0.897);
-        }
+        } */
 }
 
 .skill-css , .skill-jquery , .skill-react, .skill-graphql{
     animation: skillanimate-2 5s infinite 0s linear;
 }
-/* .skill-html{
-    animation: htmltext 5s infinite 0s linear;
-}
-    @keyframes htmltext{
-    0%{
-        transform: translateX(100px);
-        background: green;
-        }
-    49%{
-        transform: translateX(150px);
-        background: orange;
-        }
-    75%{
-        transform: translateX( 100px);
-        background: green;
-        }
-    100%{
-        transform: rotate(xx) translateX( 0px);
-        }
-}
 
- */
+/* Project section */
 
+#project-section{
+    margin: 40px 0px
+}
+.project-card{
+    text-align: center;
+   margin: 40px 10px;
+   border: 2px solid gray;
+   box-shadow: 5px 5px 14px gray;
+   
+} 
+
+.project-card img{
+    margin: 10px auto;
+    padding: 20px 10px;
+    width: 200px;
+    height: 150px;
+}
 /* Footer Section */
 #footer-section{
     background:rgba(88, 212, 88, 0.5);
