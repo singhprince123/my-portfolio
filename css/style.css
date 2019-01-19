@@ -7,6 +7,10 @@ html {
     scroll-behavior: smooth;
   }
   
+  body, html {
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+  }
 
 /* Navigation Section */
 
@@ -52,48 +56,65 @@ html {
 
  /* Heading Section */
 
-#heading-section{
-background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)) ,url('../images/header.jpeg');
-background-repeat:no-repeat;
-background-size:cover;
-background-position:center;
-height: 100vh;
-color: rgba(245, 103, 9, 0.938);
-}
+   
+ .parallax {
+    /* The image used */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)) ,url('../images/header.jpeg');
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
-#heading-section .content{
-    font-family: 'Lato', sans-serif;
+  .caption{
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      text-align:center;
+      margin: 0 auto;
+      position: absolute;
+      top:30%
+  }
+
+  .caption img{
+     width:300px;
+     height:200px;
+
+  }
+
+  .caption h1{
+    color: #f56709ef;
+    font-size: 1.6em;
     font-weight: bold;
-    display: block;
-    margin-top: 30vh;
-}
-#heading-section img{
-    width: 200px;
-    height: 150px;
-}
-.welcome-text {
-    padding-top: 20px;
-    font-weight: 800px;
-    font-size : 34px
-}
+    padding-top: .3em
+  }
 
-.profession{
-    font-weight: 500px;
-    font-size: 25px
-}
-.profession-adjective{
-    font-weight: 500px;
-    font-size: 25px;
-    color: white;
-}
-.welcome-text::after{
-  content: '';
-  background: #efefef;
-  display: block;
-  height: 5px;
-  width: 300px;
-  margin: 10px auto 5px;
-}
+  .caption h1::after{
+    content: '';
+    background: #efefef;
+    display: block;
+    height: 3px;
+    width: 250px;
+    margin: auto ;
+  }
+  .caption h2{
+      padding: 0px;
+      color: white;
+      font-size: 1.3em;
+      font-weight: bold
+  }
+  .caption h3{
+    color: rgba(245, 103, 9, 0.938);
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px
+  }
 
 /* About section */
 

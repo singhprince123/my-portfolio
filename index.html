@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="70">
 <!-- Navigation Section-->
 <section id="nav-section">
     <nav class="navbar navbar-expand-md navbar-light fixed-top">
@@ -37,22 +37,13 @@
 </section>
 
 <!--Heading Section-->
-<section id="heading-section">
-  <div class="container text-center ">
-    <div class="row">
-      <div class="col-md-12 ">
-        <div class="content">
-          <img src="images/mypic.jpg" class="img-thumbnail" width="300px" alt=""> <br>
-            <span class="welcome-text">Hii , I am Prince Singh</span><br>
-            <span class="profession-adjective"></span><br>
-             <span class="profession"> Web Developer</span>
-        </div>
-          
-      </div>
-    </div>
-  </div>
-</section>
-
+<div class="parallax"></div>
+<div class="caption text-center">
+    <img src="images/mypic.jpg" class="img-thumbnail" width="300px" alt=""> <br>
+    <h1>Hii , I am Prince Singh</h1>
+    <h2 class="type"></h2>
+     <h3> Web Developer</h3>
+</div>
 <!--About Section-->
 <section id="about-section">
   <div class="row">
@@ -186,7 +177,7 @@ let count =0;
 const rotateWord = () =>{
     let currentWord = adjective[count]; 
 
-    const element=  document.querySelector('.profession-adjective');
+    const element=  document.querySelector('.type');
     
        element.innerHTML= currentWord;
     count++;
